@@ -1,4 +1,4 @@
-export const  data=[
+ const  data=[
     {
         id:1,
         name:'Khaiser Khanam',
@@ -24,3 +24,4 @@ export const  data=[
         image:"../assets/friend4.png"
     }
 ]
+export default data;

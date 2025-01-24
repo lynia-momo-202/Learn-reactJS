@@ -25,6 +25,7 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    padding-right: 30px;
   }
   
   .friend-card {
@@ -78,6 +79,7 @@
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     font-weight: 500;
+    width: 100%;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
   }
