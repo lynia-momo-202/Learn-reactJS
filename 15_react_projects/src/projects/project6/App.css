@@ -1,0 +1,76 @@
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .step-container {
+    margin-bottom: 20px;
+  }
+  
+  .range-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .step-label {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Counter Section */
+  .counter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .counter-input {
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  /* Button Styles */
+  .btn {
+    background-color: #508c9b;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #407280;
+  }
+  
+  .reset-btn {
+    background-color: #c63c51;
+    margin-top: 10px;
+  }
+  
+  .reset-btn:hover {
+    background-color: #b13245;
+  }
+  
+  /* Date Display */
+  .date-display {
+    font-size: 1.2rem;
+    color: #201e43;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
