@@ -15,18 +15,20 @@ function FriendList() {
   return (
         <div className='friends-container'>
             <h2>I have {friendData.length} Friends</h2>
-          <div className='friend-list'>
-              {friendData.map((friend) => (
-                  <Friends
-                      key={friend.id}
-                      name={friend.name}
-                      age={friend.age}
-                      image={friend.image} 
-                    />
-              ))}
-          </div>
-              <button className='clear-button' onClick={handleClick}>clear All</button>
-      </div>
+            <div className='friend-list'>
+                {friendData.map((friend) => (
+                    <Friends
+                        key={friend.id}
+                        name={friend.name}
+                        age={friend.age}
+                        image={friend.image} 
+                        />
+                ))}
+            </div>
+            {  friendData.length >0 ?
+            (<button className='clear-button' onClick={handleClick}>clear All</button>) 
+            : null}     
+         </div>
   )
 }
 
