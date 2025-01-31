@@ -1,5 +1,6 @@
 import React from 'react'
-import DisplayDate from './projects/project6/DisplayDate'
+import Accordion from './projects/project4/Accordion'
+// import DisplayDate from './projects/project6/DisplayDate'
 // import FriendList from './projects/project5/FriendList'
 // import Study from './projects/project3/Study'
 // import Random from './projects/project2/Random'
@@ -12,7 +13,8 @@ function App() {
       {/* <Random/> */}
       {/* <Study/> */}
       {/* <FriendList/> */}
-      <DisplayDate/>
+      {/* <DisplayDate/> */}
+      <Accordion/>
     </div>
   )
 }
