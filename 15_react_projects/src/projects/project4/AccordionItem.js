@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 
 function AccordionItem(props) {
     const {number,question,answer} = props
-    const [show,setShow] = useState(0)
+    const [show,setShow] = useState(false)
     const handleshow = () =>{
         // alert("hllo")
-        {show? setShow(0) : setShow(1)}
+       setShow((show)=>!show)
     }
     return (
         <div className={`accordion ${show? 'active' : ''}`}>
@@ -13,7 +13,7 @@ function AccordionItem(props) {
                 <span className='accordion-icon'>
                     {show? '-' : '+'}
                     </span>
-                <span className='accordion-number'>{number}</span>
+                <span className='accordion-number'>{number<10? `0${number}`: number}</span>
                 <span className='accordion-title'>{question}</span>
             </div>
             <div className='accordion-content'>

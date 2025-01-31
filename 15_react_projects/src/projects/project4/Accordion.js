@@ -5,7 +5,6 @@ import AccordionSingleItem from './AccordionSingleItem'
 import data from './data'
 
 function Accordion() {
-    let i = 1, j = 1;
     const [select, setSelect] = useState(null)
 
     const handleshowItem = (id) => {
@@ -16,16 +15,14 @@ function Accordion() {
     return (
         <main className='accordion-container'>
 
-            <p className='faq'>
-                <strong>
+            <h3 className='faq'>
                     Frequently Asked Questions (FAQ's)
-                </strong>
-            </p>
+            </h3>
             {
-                data.map((faq) => (
+                data.map((faq,index) => (
                     <AccordionItem
-                        key={i}
-                        number={i++}
+                        key={index}
+                        number={index+1}
                         question={faq.question}
                         answer={faq.answer}
                     />
@@ -33,20 +30,19 @@ function Accordion() {
                 )
                 )
             }
-            <p className='faq'>
+            <h3 className='faq'>
                 ------------------------
-            </p>
+            </h3>
 
             {
-                data.map((faq) => (
+                data.map((faq,index) => (
                     <AccordionSingleItem
-                        key={j}
-                        number={j++}
+                        key={index}
+                        number={index+1}
                         question={faq.question}
-                        answer={faq.answer}
                         select = {select}
                         handleshowItem={handleshowItem}
-                    />
+                    >{faq.answer}</AccordionSingleItem>
 
                 )
                 )

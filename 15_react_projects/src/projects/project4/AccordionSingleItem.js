@@ -1,5 +1,5 @@
-function AccordionSingleItem(props) {
-    const { number, question, answer, select ,handleshowItem} = props
+function AccordionSingleItem({number, question, select ,handleshowItem,children}) {
+    // const { number, question, select ,handleshowItem} = props
     
     return (
         <div className={`accordion ${number === select ? 'active' : ''}`}>
@@ -7,11 +7,11 @@ function AccordionSingleItem(props) {
                 <span className='accordion-icon'>
                     {number === select ? '-' : '+'}
                 </span>
-                <span className='accordion-number'>{number}</span>
+                <span className='accordion-number'>{number<10? `0${number}`: number}</span>
                 <span className='accordion-title'>{question}</span>
             </div>
-            <div className='accordion-content'>
-                {number === select ? answer : ''}
+             <div className='accordion-content'>
+                {number === select ? children:''}
             </div>
         </div>
     )
