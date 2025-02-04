@@ -14,7 +14,7 @@ function ExpenseTracker() {
         // console.log("Amount = ", expense.get('Amount'))
 
         const name = expense.get('Expense')
-        const amount = Number(expense.get('Amount'))
+        const amount = parseFloat(expense.get('Amount'))
 
         const expenseListcopy = [...expenseList]
         // console.log(expenseListcopy)
@@ -51,20 +51,20 @@ function ExpenseTracker() {
                 <input type='submit' value='Add' className='input button' />
             </form>
 
-            <div className='expenseList'>
+            <ul className='expenseList'>
                 {
                     expenseList.map((expenseItem) =>
                     (
-                        <div key={expenseItem.id} className='expenseItem'>
+                        <li key={expenseItem.id} className='expenseItem'>
                             <span>{expenseItem.name}</span>
                             <span>xaf {expenseItem.amount}</span>
                             <button className='deleteButton' onClick={() => handleDelete(expenseItem.id)}>Delete</button>
-                        </div>
+                        </li>
                     )
                     )
 
                 }
-            </div>
+            </ul>
 
             <div className='total'>
                 Total: xaf {total}
