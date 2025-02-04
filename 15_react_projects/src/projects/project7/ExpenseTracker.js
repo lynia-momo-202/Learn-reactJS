@@ -62,7 +62,6 @@ function ExpenseTracker() {
                         </li>
                     )
                     )
-
                 }
             </ul>
 
