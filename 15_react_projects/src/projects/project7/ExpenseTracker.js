@@ -3,7 +3,7 @@ import './App.css'
 
 function ExpenseTracker() {
 
-    const [total, setTotal] = useState(0.00)
+    const [total, setTotal] = useState(0)
     const [expenseList, setExpenseList] = useState([])
 
     const handleSubmit = (e) => {
@@ -31,14 +31,14 @@ function ExpenseTracker() {
         const expenseListcopy = [...expenseList]
         // console.log(expenseListcopy)
 
-        const expensedelete = (expenseListcopy.filter(e => e.id == id))
-        const amountdelete = expensedelete[0].amount
+        const expensedelete = (expenseListcopy.filter(e => e.id === id))
+        const amountdelete = parseFloat(expensedelete[0].amount)
         // console.log(amountdelete)
 
-        const expenseListupdate = expenseListcopy.filter(expense => expense.id != id)
+        const expenseListupdate = expenseListcopy.filter(expense => expense.id !== id)
 
         setExpenseList(expenseListupdate)
-        setTotal((total) => total - amountdelete )
+        setTotal((total) => total - amountdelete) 
     }
 
     return (
