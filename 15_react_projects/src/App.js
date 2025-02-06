@@ -1,6 +1,5 @@
 import React from 'react'
-import ExpenseTracker from './projects/project7/ExpenseTracker'
-// import Accordion from './projects/project4/Accordion'
+import Accordion from './projects/project4/Accordion'
 // import DisplayDate from './projects/project6/DisplayDate'
 // import FriendList from './projects/project5/FriendList'
 // import Study from './projects/project3/Study'
@@ -15,8 +14,7 @@ function App() {
       {/* <Study/> */}
       {/* <FriendList/> */}
       {/* <DisplayDate/> */}
-      {/* <Accordion/> */}
-      <ExpenseTracker/>
+      <Accordion/>
     </div>
   )
 }
